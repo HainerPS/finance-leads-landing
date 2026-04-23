@@ -41,6 +41,24 @@ app.post('/leads', (req, res) => {
     });
   });
 
+  app.get('/leads', (req, res) => {
+    const sql = `
+      SELECT * FROM leads
+      ORDER BY created_at DESC
+    `;
+  
+    db.all(sql, [], (err, rows) => {
+      if (err) {
+        console.error('Erro ao buscar leads:', err.message);
+        return res.status(500).json({
+          error: 'Erro ao buscar leads no banco de dados.'
+        });
+      }
+  
+      return res.status(200).json(rows);
+    });
+  });
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
 });
