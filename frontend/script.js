@@ -29,7 +29,7 @@ leadForm.addEventListener('submit', async (event) => {
   submitButton.textContent = 'Enviando...';
 
   try {
-    const response = await fetch('http://localhost:3000/leads', {
+    const response = await fetch('https://finance-leads-backend.onrender.com/leads', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
