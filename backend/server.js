@@ -1,11 +1,11 @@
 const db = require('./database');
-
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-const PORT = 3000;
-
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -15,11 +15,11 @@ app.get('/', (req, res) => {
 app.post('/leads', (req, res) => {
     const { nome, email, telefone, empresa, mensagem } = req.body;
   
-    if (!nome || !email) {
-      return res.status(400).json({
-        error: 'Nome e email são obrigatórios.'
-      });
-    }
+    if (!nome?.trim() || !email?.trim()) {
+        return res.status(400).json({
+          error: 'Nome e email são obrigatórios.'
+        });
+      }
   
     const sql = `
       INSERT INTO leads (nome, email, telefone, empresa, mensagem)
