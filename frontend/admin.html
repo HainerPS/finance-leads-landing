@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Leads | Aevo Capital</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <main class="admin-page">
+    <div class="container">
+      <header class="admin-header">
+        <div>
+          <p class="eyebrow">Painel interno</p>
+          <h1>Leads recebidos</h1>
+          <p class="subtitle">
+            Visualização simples dos contatos enviados pela landing page.
+          </p>
+        </div>
+
+        <div class="admin-actions">
+          <button id="reload-button">Atualizar</button>
+          <a href="index.html">Voltar para landing</a>
+        </div>
+      </header>
+
+      <section class="summary">
+        <div class="summary-card">
+          <span>Total de leads</span>
+          <strong id="total-leads">0</strong>
+        </div>
+      </section>
+
+      <section>
+        <p id="status-message" class="status-message"></p>
+        <div id="leads-list" class="leads-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
