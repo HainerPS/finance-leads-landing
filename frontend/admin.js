@@ -8,7 +8,7 @@ async function loadLeads() {
   leadsList.innerHTML = '';
 
   try {
-    const response = await fetch('http://localhost:3000/leads');
+    const response = await fetch('https://finance-leads-backend.onrender.com/leads');
     const leads = await response.json();
 
     if (!response.ok) {
