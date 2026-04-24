@@ -2,6 +2,22 @@
 
 Landing page moderna para captação de leads com painel administrativo integrado.
 
+---
+
+## 🖼️ Preview do projeto
+
+### 🌐 Landing Page
+
+![Landing Page](./frontend/assets/landing-preview.png)
+
+### 📊 Painel Admin
+
+![Admin Panel](./frontend/assets/admin-preview.png)
+
+> 💡 *Dica: adicione prints reais do seu projeto nessa pasta (`frontend/assets`)*
+
+---
+
 ## 🌐 Acesse o projeto
 
 🔗 **Landing Page:**
@@ -17,7 +33,7 @@ https://finance-leads-backend.onrender.com/leads
 
 ## 📌 Sobre o projeto
 
-Este projeto foi desenvolvido com o objetivo de simular um fluxo real de captação de leads:
+Este projeto simula um fluxo real de captação de leads:
 
 * Usuário preenche formulário na landing page
 * Dados são enviados para uma API
@@ -53,22 +69,22 @@ Este projeto foi desenvolvido com o objetivo de simular um fluxo real de captaç
 
 * Formulário de captura de leads
 * Feedback de envio (sucesso/erro)
-* Tema dark/light persistido com localStorage
+* Tema dark/light com localStorage
 * Layout responsivo
 
 ### Backend (API REST)
 
-* Recebimento de leads via POST `/leads`
-* Validação de campos obrigatórios
-* Armazenamento no SQLite
-* Listagem de leads via GET `/leads`
+* POST `/leads` → cadastra lead
+* GET `/leads` → lista leads
+* Validação de dados
+* Armazenamento com SQLite
 
 ### Painel Admin
 
 * Consumo da API em produção
 * Listagem de leads em tempo real
 * Contador total de leads
-* Botão de atualização manual
+* Atualização manual
 
 ---
 
@@ -80,6 +96,8 @@ Este projeto foi desenvolvido com o objetivo de simular um fluxo real de captaç
 git clone https://github.com/HainerPS/finance-leads-landing.git
 ```
 
+---
+
 ### 2. Backend
 
 ```bash
@@ -88,9 +106,9 @@ npm install
 node server.js
 ```
 
-Servidor disponível em:
+Acesse:
 
-```
+```bash
 http://localhost:3000
 ```
 
@@ -98,13 +116,13 @@ http://localhost:3000
 
 ### 3. Frontend
 
-Abra o arquivo:
+Abra:
 
-```
+```bash
 frontend/index.html
 ```
 
-Ou utilize Live Server.
+Ou use Live Server.
 
 ---
 
@@ -124,7 +142,10 @@ finance-leads-landing/
 │   ├── script.js
 │   ├── admin.js
 │   ├── style.css
-│   └── admin.css
+│   ├── admin.css
+│   └── assets/
+│       ├── landing-preview.png
+│       └── admin-preview.png
 │
 └── README.md
 ```
@@ -133,22 +154,22 @@ finance-leads-landing/
 
 ## 🧠 Aprendizados
 
-* Integração entre frontend e backend
-* Criação de API REST com Express
-* Manipulação de banco SQLite
-* Deploy de aplicações (Vercel + Render)
+* Integração frontend + backend
+* Criação de API REST
+* Uso de SQLite
+* Deploy (Vercel + Render)
 * Consumo de API com fetch
-* Tratamento de erros no frontend
+* Tratamento de erros
 
 ---
 
 ## 🔮 Possíveis melhorias
 
-* Autenticação no painel admin
+* Autenticação no admin
 * Paginação de leads
-* Filtro e busca
+* Filtros e busca
 * Integração com CRM
-* Deploy com banco externo (PostgreSQL)
+* Banco em nuvem (PostgreSQL)
 
 ---
 
